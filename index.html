@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Document</title>
+<script src="/movie/js/jquery-1.11.0.min.js"></script>
+<script src="/movie/js/movie.js"></script>
+<link rel="stylesheet" href="/movie/css/reset.css" />
+</head>
+<style>
+header{height:80px;width:100%;background:#06db77;background:linear-gradient(to right,#06db77 0,#0fc3bd 50%,#14b9dc 100%);border-bottom:1px solid #000;text-align:center;}
+h1{line-height:40px;color:#fff;font-size:18px;font-weight:500;}
+header p{line-height:30px;color:#fff;font-size:18px;font-weight:500;}
+.content{width:1200px;margin:0 auto;height:2800px;background:#eee;}
+footer{height:150px;width:100%;background:#333;}
+</style>
+<body>
+	<header>
+		<h1>무비 플러그인</h1>
+		<p>네이버tv UI페이지 커스터마이징.(하단 픽스 및 드래그 기능)</p>
+	</header>
+	<div class="content">
+		<div class="wrap"></div>
+	</div>
+	<footer></footer>
+	<script>
+		$(".wrap").diziaMovie({
+			src : "bookcube.mp4", // 비디오파일 경로
+			width : 1200, // 비디오 가로 크기로 세로크기와는 16:9 비율로 자동 조절됩니다.
+			fix : true, //true일때 하단 fix 비디오 생김
+			right : true, // true일때 fix 비디오 오른쪽, false 일때 왼쪽
+			controls : true, // 비디오 컨트롤 유무
+			autoplay : true,
+			loop : true, // 비디오 반복 유무
+			muted : true // 비디오 음소거
+		});
+	</script>
+</body>
+</html>
